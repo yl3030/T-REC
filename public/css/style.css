@@ -1609,7 +1609,6 @@ footer p {
 	}
 
 	.content-box1 {
-		margin-top: 0;
 		display: block;
 	}
 
@@ -1700,7 +1699,6 @@ footer p {
 	.content-box1 {
 		display: grid;
 		grid-template-columns: 25% 75%;
-		margin-top: 0;
 	}
 
 	.content-box1 .data-box {
