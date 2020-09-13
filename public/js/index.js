@@ -112,6 +112,7 @@ $(".drop-down-icon").click(function () {
 	}
 });
 
+
 // footer在最下方
 var mH =
 	$(window).height() - $("header").height() - $("footer").height() - 120 - 32;
@@ -122,19 +123,18 @@ console.log("footer height:" + $("footer").height());
 console.log(mH);
 
 
+var Bswiper = new Swiper(".banner", {
+	loop: true,
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: ".banner-sp",
+		clickable: true,
+	},
+});
 
-
-// var Bswiper = new Swiper(".banner", {
-// 	loop: true,
-// 	autoplay: {
-// 		delay: 3000,
-// 		disableOnInteraction: false,
-// 	},
-// 	pagination: {
-// 		el: ".banner-sp",
-// 		clickable: true,
-// 	},
-// });
 
 // 滑鼠滑入後停止輪播
 $(".banner").mouseenter(function () {
@@ -143,3 +143,4 @@ $(".banner").mouseenter(function () {
 $(".banner").mouseleave(function () {
 	Bswiper.autoplay.start();
 });
+
