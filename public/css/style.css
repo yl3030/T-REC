@@ -259,7 +259,7 @@ header .nav-box .drop-down-menu {
 }
 
 header .nav-box .main-menu {
-	position: relative;
+	/* position: relative; */
 	width: 16%;
 	display: inline-block;
 	margin: 0;
