@@ -10,14 +10,27 @@ $(".hamburger").click(function () {
 	}
 });
 
-// 手風琴
-$(".main-title-box").click(function () {
-	if ($(this).children(".fa-angle-down").hasClass("rotate")) {
-		$(this).children(".fa-angle-down").removeClass("rotate");
-		$(this).parents(".main-menu").children("ul").slideUp(300);
-	} else {
-		$(this).children(".fa-angle-down").addClass("rotate");
-		$(this).parents(".main-menu").children("ul").slideDown(300);
+$(".main-menu").click(function(){
+	if($(this).hasClass("open")){
+		$(this).removeClass("open");
+		$(this).children("ul").hide();
+		$(".main-menu").css("background-color","#84b356");
+	}else{
+		$(".main-menu").removeClass("open");
+		$(this).addClass("open");
+		$(".main-menu").children("ul").hide();
+		$(this).children("ul").show();
+		$(".main-menu").css("background-color","#84b356");
+		$(this).css("background-color","#a1cc77");
+	}
+});
+
+$(document).click(function (event) {
+	var m_con = $(".drop-down-menu");
+	if (!m_con.is(event.target) && m_con.has(event.target).length === 0) {
+		$(".drop-down-menu").children(".main-menu").children("ul").hide();
+		$(".main-menu").css("background-color","#84b356");
+		$(".main-menu").removeClass("open");
 	}
 });
 
@@ -89,6 +102,8 @@ $(".declare-box")
 		$(this).hide();
 		$(this).parents(".declare-box").children(".less").show();
 		$(this).parents(".declare-box").children(".less").css("display", "block");
+		var dH = $(this).parents(".table-content").height() + 30;
+		$(this).parents(".table-content").children(".detail-btn").css("height",dH);
 	});
 $(".declare-box")
 	.children(".less")
@@ -100,6 +115,7 @@ $(".declare-box")
 			.slideUp(200);
 		$(this).hide();
 		$(this).parents(".declare-box").children(".more").show();
+		$(this).parents(".table-content").children(".detail-btn").css("height","200px");
 	});
 
 $(".drop-down-icon").click(function () {
@@ -111,6 +127,8 @@ $(".drop-down-icon").click(function () {
 		$(this).parents(".drop-down-qa").children(".cont").slideUp(300);
 	}
 });
+
+
 
 
 // footer在最下方
