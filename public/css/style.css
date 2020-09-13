@@ -384,7 +384,7 @@ marquee ul li {
 /* 憑證張數 */
 .data-box {
 	display: inline-block;
-	width: 30%;
+	/* width: 30%; */
 }
 
 .data-box .data {
@@ -450,7 +450,7 @@ marquee ul li {
 .banner-box {
 	padding-left: 10px;
 	display: inline-block;
-	width: 69%;
+	/* width: 69%; */
 }
 
 .banner.swiper-container {
