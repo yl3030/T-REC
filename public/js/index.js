@@ -105,10 +105,10 @@ $(".declare-box")
 $(".drop-down-icon").click(function () {
 	if ($(this).children(".straight").hasClass("rotate")) {
 		$(this).children(".straight").removeClass("rotate");
-		$(this).parents(".drop-down-qa").children(".cont").slideUp(300);
+		$(this).parents(".drop-down-qa").children(".cont").slideDown(300);
 	} else {
 		$(this).children(".straight").addClass("rotate");
-		$(this).parents(".drop-down-qa").children(".cont").slideDown(300);
+		$(this).parents(".drop-down-qa").children(".cont").slideUp(300);
 	}
 });
 

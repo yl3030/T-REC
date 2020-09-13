@@ -11,8 +11,8 @@
 :root {
 	--logo-color: #36ad63;
 	--gray-color: rgba(0, 0, 0, 0.2);
-	--gray-bg: #f9f9f9;
-	--main-color: #8dbc5e;
+	--gray-bg: #f5f5f5;
+	--main-color: #84b356;
 	--hover-color: #a1cc77;
 	--second-color: #edf2e7;
 	--hover-color2: #fcfff8;
@@ -255,13 +255,14 @@ header .nav-box {
 }
 
 header .nav-box .drop-down-menu {
-	display: flex;
-	justify-content: space-between;
+	width: 100%;
 }
 
 header .nav-box .main-menu {
 	position: relative;
-	width: 100%;
+	width: 16%;
+	display: inline-block;
+	margin: 0;
 }
 
 header .nav-box .main-title {
@@ -291,6 +292,11 @@ header .nav-box .main-menu ul {
 	background-color: var(--second-color);
 	display: none;
 	border: 1px solid rgb(221, 233, 207);
+}
+
+
+header .rwd-nav .main-menu ul {
+	width: 100vw;
 }
 
 header .nav-box .second-menu a {
@@ -354,6 +360,10 @@ header .nav-box .second-menu:hover {
 	color: rgb(126, 126, 126);
 }
 
+.rn-container {
+	z-index: 20;
+}
+
 marquee {
 	padding: 10px 0;
 	background-color: var(--gray-bg);
@@ -366,12 +376,17 @@ marquee ul li {
 
 /* content-box1 */
 .content-box1 {
-	display: grid;
-	grid-template-columns: 30% 70%;
+	/* display: grid;
+	grid-template-columns: 30% 70%; */
 	margin-top: 0;
 }
 
 /* 憑證張數 */
+.data-box {
+	display: inline-block;
+	width: 30%;
+}
+
 .data-box .data {
 	border-radius: 5px;
 	margin-bottom: 7px;
@@ -434,6 +449,8 @@ marquee ul li {
 /* swiper */
 .banner-box {
 	padding-left: 10px;
+	display: inline-block;
+	width: 69%;
 }
 
 .banner.swiper-container {
@@ -481,6 +498,8 @@ marquee ul li {
 
 .banner .swiper-pagination-bullet {
 	background: #fff;
+	width: 12px;
+	height: 12px;
 }
 
 .banner .swiper-pagination-bullets {
@@ -810,7 +829,7 @@ button.lookmore a {
 }
 
 .ds-box {
-	min-width: 230px;
+	min-width: 350px;
 }
 
 .option-box ul li {
@@ -873,6 +892,7 @@ button.lookmore a {
 .table-title li {
 	text-align: center;
 	color: var(--main-color);
+	font-weight: 500;
 }
 
 .table-title p {
@@ -932,7 +952,6 @@ button.lookmore a {
 
 .content-box .name {
 	padding: 30px;
-	text-align: center;
 }
 
 .content-box .num {
@@ -941,7 +960,7 @@ button.lookmore a {
 }
 
 .content-box .declare-box {
-	padding: 15px 0;
+	padding: 25px 0;
 }
 
 .content-box .declare-box .hide-list {
@@ -949,8 +968,11 @@ button.lookmore a {
 }
 
 .content-box .declare-box ul li {
-	text-align: center;
 	margin-bottom: 5px;
+}
+
+.content-box .declare-box ul {
+	padding: 0 50px;
 }
 
 .content-box .declare-box .show-btn {
@@ -1041,14 +1063,21 @@ button.lookmore a {
 }
 
 .interprise .modal-content .title-box td {
-	background-color: #f1ffde;
-	border-radius: 5px;
+	background-color: #F1FFDE;
 	text-align: center;
 	padding: 10px;
-	color: #8dbc5e;
+	color: #82ad56;
 	font-weight: 500;
 	word-wrap: break-word;
 	word-break: break-all;
+}
+
+.interprise .modal-content .title-box td:nth-child(1) {
+	border-radius: 5px 0 0 5px;
+}
+
+.interprise .modal-content .title-box td:nth-child(3) {
+	border-radius: 0 5px 5px 0;
 }
 
 .interprise .modal-content .detail-content td {
@@ -1200,7 +1229,6 @@ button.lookmore a {
 	display: inline-block;
 	float: right;
 	margin-right: 15px;
-	/* margin-top: -5px; */
 }
 
 .drop-down-icon .straight {
@@ -1226,10 +1254,6 @@ button.lookmore a {
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-}
-
-.drop-down-qa .cont {
-	display: none;
 }
 
 .drop-down-qa table {
@@ -1385,10 +1409,6 @@ footer p {
 	}
 
 	header .top-box .inpu-box {
-		display: none;
-	}
-
-	header .nav-box {
 		display: none;
 	}
 
@@ -1600,10 +1620,6 @@ footer p {
 		display: none;
 	}
 
-	header .nav-box {
-		display: none;
-	}
-
 	header .hamburger {
 		display: inline-block;
 	}
@@ -1612,11 +1628,11 @@ footer p {
 		display: block;
 	}
 
-	.content-box1 .data-box {
+	/* .content-box1 .data-box {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 8px;
-	}
+	} */
 
 	.data-box .data {
 		display: grid;
@@ -1661,10 +1677,6 @@ footer p {
 	.f-cont img {
 		width: 50%;
 	}
-
-	/* .big-title {
-		margin-top: 147px;
-	} */
 }
 
 @media screen and (min-width: 1024px) {
@@ -1685,7 +1697,7 @@ footer p {
 	}
 
 	header .nav-box {
-		display: block;
+		display: flex;
 	}
 
 	header .hamburger {
@@ -1697,13 +1709,13 @@ footer p {
 	}
 
 	.content-box1 {
-		display: grid;
-		grid-template-columns: 25% 75%;
+		/* display: grid;
+		grid-template-columns: 25% 75%; */
 	}
 
-	.content-box1 .data-box {
+	/* .content-box1 .data-box {
 		display: block;
-	}
+	} */
 
 	.data-box .data {
 		display: grid;
