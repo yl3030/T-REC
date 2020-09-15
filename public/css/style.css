@@ -1252,6 +1252,57 @@ button.lookmore a {
 	padding: 12px;
 }
 
+/* media */
+#mediaOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 30;
+    display: none;
+}
+
+#mediaOverlay #youtubeWrap {
+    margin: 150px auto;
+    display: block;
+	width: 60%;
+	height: 0;
+	padding-bottom: 33.75%;
+	position: relative;
+}
+
+#mediaOverlay .close-btn {
+	width: 25px;
+	height: 25px;
+	font-size: 25px;
+	text-shadow:none;
+	position: absolute;
+	right: -30px;
+	top: -3px;
+	background-color: transparent;
+	border: 0;
+}
+
+#mediaOverlay .close-btn .fa-times{
+	color: #fff;
+	transition: 0.3s;
+}
+
+#mediaOverlay .close-btn .fa-times:hover {
+	color: #84b356;
+	transform: rotate(180deg);
+}
+
+#mediaOverlay #banner-video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 /* footer */
 footer {
 	margin-top: 60px;
@@ -1266,78 +1317,7 @@ footer p {
 	font-weight: 500;
 }
 
-@media screen and (max-width: 576px) {
-	.data-box .data {
-		display: inline-block;
-	}
 
-	.data-box .data img {
-		display: none;
-	}
-
-	.table-title {
-		font-size: 14px;
-	}
-
-	.content-box .name {
-		padding: 15px;
-	}
-
-	.content-box .num {
-		padding: 15px;
-	}
-
-	.content-box .declare-box {
-		padding-right: 15px;
-	}
-
-	.content-box .declare-box .show-btn {
-		border: 0;
-		padding: 0;
-	}
-
-	.content-box .declare-box .show-btn:hover {
-		background-color: transparent;
-		color: #84b356;
-		font-weight: 500;
-	}
-
-	.content-box .declare-box ul {
-		padding: 0;
-	}
-
-	.interprise .modal-title {
-		margin-top: 40px;
-	}
-
-	.interprise .modal-body {
-		padding: 15px;
-	}
-
-	.interprise .modal-list li {
-		margin-bottom: 10px;
-	}
-
-	.qa .link {
-		padding-left: 0;
-	}
-
-	.qa .link span {
-		font-size: 14px;
-	}
-
-	.qa .cont {
-		padding-left: 0;
-	}
-
-	.drop-down-icon {
-		margin-top: 3px;
-	}
-
-	.drop-down-qa table tr td {
-		padding: 15px;
-	}
-}
 
 @media screen and (min-width: 576px) {
 	.modal-dialog {
@@ -1547,6 +1527,99 @@ footer p {
 	.file-box .qa:nth-child(1) {
 		padding-bottom: 30px;
 		border-bottom: 1px solid #84b356;
+	}
+
+	#mediaOverlay #youtubeWrap {
+		width: 80%;
+		padding-bottom: 45%;
+	}
+}
+
+
+
+@media screen and (max-width: 576px) {
+	.data-box .data {
+		display: inline-block;
+	}
+
+	.data-box .data img {
+		display: none;
+	}
+
+	.table-title {
+		font-size: 14px;
+	}
+
+	.content-box .name {
+		padding: 15px;
+	}
+
+	.content-box .num {
+		padding: 15px;
+	}
+
+	.content-box .declare-box {
+		padding-right: 15px;
+	}
+
+	.content-box .declare-box .show-btn {
+		border: 0;
+		padding: 0;
+	}
+
+	.content-box .declare-box .show-btn:hover {
+		background-color: transparent;
+		color: #84b356;
+		font-weight: 500;
+	}
+
+	.content-box .declare-box ul {
+		padding: 0;
+	}
+
+	.interprise .modal-title {
+		margin-top: 40px;
+	}
+
+	.interprise .modal-body {
+		padding: 15px;
+	}
+
+	.interprise .modal-list li {
+		margin-bottom: 10px;
+	}
+
+	.qa .link {
+		padding-left: 0;
+	}
+
+	.qa .link span {
+		font-size: 14px;
+	}
+
+	.qa .cont {
+		padding-left: 0;
+	}
+
+	.drop-down-icon {
+		margin-top: 3px;
+	}
+
+	.drop-down-qa table tr td {
+		padding: 15px;
+	}
+
+	#mediaOverlay .close-btn {
+		width: 20px;
+		height: 20px;
+		font-size: 20px;
+		right: 0;
+		top: -30px;
+	}
+
+	#mediaOverlay #youtubeWrap {
+		width: 90%;
+		padding-bottom: 50.625%;
 	}
 }
 
@@ -1772,6 +1845,11 @@ footer p {
 	.interprise .detail-btn {
 		height: 220px;
 	}
+
+	#mediaOverlay #youtubeWrap {
+		width: 80%;
+		padding-bottom: 45%;
+	}
 }
 
 @media screen and (min-width: 1024px) {
@@ -1901,6 +1979,12 @@ footer p {
 
 	.interprise .detail-btn {
 		height: 200px;
+	}
+
+	#mediaOverlay #youtubeWrap {
+		margin: 150px auto;
+		width: 60%;
+		padding-bottom: 33.75%;
 	}
 }
 

@@ -214,11 +214,9 @@
                         <img src="./public/img/banner.jpg" alt="">
                     </a>
                 </div>
-                <div class="carousel-item bg" style="background-image:url(./public/img/banner.jpg)" data-interval="3000"
-                    data-pause="hover">
-                    <a href="https://www.youtube.com/watch?v=1n94tWxNcZ4&feature=emb_titled" target="_blank">
+                <div class="carousel-item bg" id="video-box" style="background-image:url(./public/img/banner.jpg)"
+                    data-interval="3000" data-pause="hover" onclick="onPlayerReady(event)">
                         <img src="./public/img/banner.jpg" alt="">
-                    </a>
                 </div>
                 <div class="carousel-item bg" style="background-image:url(./public/img/banner.jpg)" data-interval="3000"
                     data-pause="hover">
@@ -356,10 +354,59 @@
         </div>
     </div>
 
+    <div id="mediaOverlay">
+        <div id="youtubeWrap">
+            <button class="close-btn" onclick="pp()"><i class="fas fa-times"></i></button>
+            <div id="banner-video"></div>
+        </div>
+    </div>
+
     <footer>
         <p>100 台北市中正區濟南路一段4號</p>
         <p>Copyright©2020 國家再生能源憑證中心</p>
     </footer>
+
+    <script>
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('banner-video', {
+                videoId: '1n94tWxNcZ4',
+                events: {
+                    'onReady': stopVideo,
+                }
+            });
+        }
+
+        function pp() {
+            $("#mediaOverlay").hide();
+            document.documentElement.style.overflowY = 'scroll'; 
+            player.stopVideo();
+        }
+
+        function onPlayerReady(event) {
+            $("#mediaOverlay").show();
+            document.documentElement.style.overflowY = 'hidden'; 
+            event.target.playVideo();
+        }
+
+        var done = false;
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+                setTimeout(stopVideo, 6000);
+                done = true;
+            }
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
+    </script>
 
 
     <!-- awesomefont CDN -->

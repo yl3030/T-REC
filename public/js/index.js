@@ -10,18 +10,19 @@ $(".hamburger").click(function () {
 	}
 });
 
-$(".main-menu").click(function(){
-	if($(this).hasClass("open")){
+// 導覽列
+$(".main-menu").click(function () {
+	if ($(this).hasClass("open")) {
 		$(this).removeClass("open");
 		$(this).children("ul").hide();
-		$(".main-menu").css("background-color","#84b356");
-	}else{
+		$(".main-menu").css("background-color", "#84b356");
+	} else {
 		$(".main-menu").removeClass("open");
 		$(this).addClass("open");
 		$(".main-menu").children("ul").hide();
 		$(this).children("ul").show();
-		$(".main-menu").css("background-color","#84b356");
-		$(this).css("background-color","#a1cc77");
+		$(".main-menu").css("background-color", "#84b356");
+		$(this).css("background-color", "#a1cc77");
 	}
 });
 
@@ -29,7 +30,7 @@ $(document).click(function (event) {
 	var m_con = $(".drop-down-menu");
 	if (!m_con.is(event.target) && m_con.has(event.target).length === 0) {
 		$(".drop-down-menu").children(".main-menu").children("ul").hide();
-		$(".main-menu").css("background-color","#84b356");
+		$(".main-menu").css("background-color", "#84b356");
 		$(".main-menu").removeClass("open");
 	}
 });
@@ -40,6 +41,7 @@ $(".btn-box")
 		$(this).parents(".btn-box").children("button").removeClass("active");
 		$(this).addClass("active");
 	});
+
 
 // 案場介紹、案場現場
 $(".introduce").click(function () {
@@ -103,7 +105,7 @@ $(".declare-box")
 		$(this).parents(".declare-box").children(".less").show();
 		$(this).parents(".declare-box").children(".less").css("display", "block");
 		var dH = $(this).parents(".table-content").height() + 30;
-		$(this).parents(".table-content").children(".detail-btn").css("height",dH);
+		$(this).parents(".table-content").children(".detail-btn").css("height", dH);
 	});
 $(".declare-box")
 	.children(".less")
@@ -115,7 +117,10 @@ $(".declare-box")
 			.slideUp(200);
 		$(this).hide();
 		$(this).parents(".declare-box").children(".more").show();
-		$(this).parents(".table-content").children(".detail-btn").css("height","200px");
+		$(this)
+			.parents(".table-content")
+			.children(".detail-btn")
+			.css("height", "200px");
 	});
 
 $(".drop-down-icon").click(function () {
@@ -128,9 +133,6 @@ $(".drop-down-icon").click(function () {
 	}
 });
 
-
-
-
 // footer在最下方
 var mH =
 	$(window).height() - $("header").height() - $("footer").height() - 120 - 32;
@@ -139,7 +141,6 @@ console.log("window height:" + $(window).height());
 console.log("header height:" + $("header").height());
 console.log("footer height:" + $("footer").height());
 console.log(mH);
-
 
 var Bswiper = new Swiper(".banner", {
 	loop: true,
@@ -153,7 +154,6 @@ var Bswiper = new Swiper(".banner", {
 	},
 });
 
-
 // 滑鼠滑入後停止輪播
 $(".banner").mouseenter(function () {
 	Bswiper.autoplay.stop();
@@ -161,4 +161,3 @@ $(".banner").mouseenter(function () {
 $(".banner").mouseleave(function () {
 	Bswiper.autoplay.start();
 });
-
