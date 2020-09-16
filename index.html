@@ -207,8 +207,8 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> -->
+                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="4"></li> -->
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active bg" style="background-image:url(./public/img/banner.jpg)"
@@ -223,22 +223,18 @@
                     <img src="./public/img/maxresdefault.jpg" alt="">
                 </div>
                 <div class="carousel-item bg" id="video-box2"
-                    style="background-image:url(./public/img/maxresdefault.jpg)" data-interval="3000" data-pause="hover"
+                    style="background-image:url(https://i.ytimg.com/vi/5L2sPBCbgrs/maxresdefault.jpg)" data-interval="3000" data-pause="hover"
                     onclick="onPlayerReady2(event)">
-                    <img src="./public/img/maxresdefault.jpg" alt="">
+                    <img src="https://i.ytimg.com/vi/5L2sPBCbgrs/maxresdefault.jpg" alt="">
                 </div>
-                <div class="carousel-item bg" style="background-image:url(./public/img/banner.jpg)" data-interval="3000"
+                <!-- <div class="carousel-item bg" data-interval="3000"
                     data-pause="hover">
-                    <a href="https://www.youtube.com/watch?v=1n94tWxNcZ4&feature=emb_titled" target="_blank">
-                        <img src="./public/img/banner.jpg" alt="">
-                    </a>
+                    <a href="#"></a>
                 </div>
-                <div class="carousel-item bg" style="background-image:url(./public/img/banner.jpg)" data-interval="3000"
+                <div class="carousel-item bg" data-interval="3000"
                     data-pause="hover">
-                    <a href="https://www.youtube.com/watch?v=1n94tWxNcZ4&feature=emb_titled" target="_blank">
-                        <img src="./public/img/banner.jpg" alt="">
-                    </a>
-                </div>
+                    <a href="#"></a>
+                </div> -->
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -386,31 +382,26 @@
         // var player;
         var player2;
         
-        // function onYouTubeIframeAPIReady() {
-        //     player = new YT.Player('banner-video', {
-        //         videoId: '1n94tWxNcZ4',
-        //         events: {
-        //             'onReady': stopVideo,
-        //         }
-        //     });
-        // }
-
-        function onYouTubeIframeAPIReady2() {
-            player2 = new YT.Player('banner-vide', {
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('banner-video', {
                 videoId: '1n94tWxNcZ4',
-                // videoId: '5L2sPBCbgrs',
+                events: {
+                    'onReady': stopVideo,
+                }
+            });
+             player2 = new YT.Player('banner-vide', {
+                videoId: '5L2sPBCbgrs',
                 events: {
                     'onReady': stopVideo,
                 }
             });
         }
        
-
-        // function pp() {
-        //     $("#mediaOverlay").hide();
-        //     document.documentElement.style.overflowY = 'scroll';
-        //     player.stopVideo();
-        // }
+        function pp() {
+            $("#mediaOverlay").hide();
+            document.documentElement.style.overflowY = 'scroll';
+            player.stopVideo();
+        }
 
         function pp2() {
             $("#mediaOverlay2").hide();
@@ -422,16 +413,14 @@
         function onPlayerReady2(event) {
             $("#mediaOverlay2").show();
             document.documentElement.style.overflowY = 'hidden';
-            event2.target.playVideo();
+            event.target.playVideo();
         }
 
-        // function onPlayerReady(event) {
-        //     $("#mediaOverlay").show();
-        //     document.documentElement.style.overflowY = 'hidden';
-        //     event.target.playVideo();
-        // }
-
-       
+        function onPlayerReady(event) {
+            $("#mediaOverlay").show();
+            document.documentElement.style.overflowY = 'hidden';
+            event.target.playVideo();
+        }
 
         var done = false;
         function onPlayerStateChange(event) {

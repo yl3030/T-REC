@@ -1583,7 +1583,7 @@ footer p {
 		display: block;
 	}
 
-	#mediaOverlay #youtubeWrap {
+	.mo .youtubeWrap {
 		width: 80%;
 		padding-bottom: 45%;
 	}
@@ -1667,7 +1667,7 @@ footer p {
 		padding: 15px;
 	}
 
-	#mediaOverlay .close-btn {
+.mo .close-btn {
 		width: 20px;
 		height: 20px;
 		font-size: 20px;
@@ -1675,7 +1675,7 @@ footer p {
 		top: -30px;
 	}
 
-	#mediaOverlay #youtubeWrap {
+	.mo .youtubeWrap {
 		width: 90%;
 		padding-bottom: 50.625%;
 	}
@@ -1952,7 +1952,7 @@ footer p {
 		height: 220px;
 	}
 
-	#mediaOverlay #youtubeWrap {
+	.mo .youtubeWrap {
 		width: 80%;
 		padding-bottom: 45%;
 	}
@@ -2093,7 +2093,7 @@ footer p {
 		height: 200px;
 	}
 
-	#mediaOverlay #youtubeWrap {
+	.mo .youtubeWrap {
 		margin: 150px auto;
 		width: 60%;
 		padding-bottom: 33.75%;
