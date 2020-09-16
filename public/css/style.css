@@ -262,12 +262,11 @@ header .nav-box .drop-down-menu {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
 }
 
 header .nav-box .main-menu {
 	position: relative;
-	width: 16%;
+	width: 100%;
 	display: inline-block;
 	margin: 0;
 }
@@ -1003,6 +1002,10 @@ button.lookmore a {
 	word-break: break-all;
 }
 
+.interprise .modal-content .title-box td p {
+	color: #82ad56;
+}
+
 .interprise .modal-content .title-box td:nth-child(1) {
 	border-radius: 5px 0 0 5px;
 }
@@ -1017,6 +1020,14 @@ button.lookmore a {
 	border-bottom: 1px solid #d4edb2;
 	word-wrap: break-word;
 	word-break: break-all;
+}
+
+.interprise .modal-content p {
+	margin: 0;
+}
+
+.interprise .modal-content .m-num {
+	display: none;
 }
 
 .interprise .m-date {
@@ -1344,11 +1355,15 @@ footer p {
 	}
 
 	header .nav-box .main-menu {
-		width: 33.3333%;
+		width: 25%;
 	}
 
 	header .nav-box {
 		position: relative;
+	}
+
+	header .nav-box .drop-down-menu {
+		flex-wrap: wrap;
 	}
 
 	header .nav-box .main-menu {
@@ -1365,6 +1380,10 @@ footer p {
 
 	header .nav-box .main-menu:hover ul {
 		display: none;
+	}
+
+	header .nav-box .main-title {
+		font-size: 14px;
 	}
 
 	header .hamburger {
@@ -1489,6 +1508,10 @@ footer p {
 	.content-box .declare-box {
 		padding-bottom: 30px;
 		width: 33.333%;
+	}
+
+	.interprise .modal-list li {
+		text-align: left;
 	}
 
 	.interprise .table-content .detail-btn {
@@ -1623,6 +1646,16 @@ footer p {
 	}
 }
 
+@media screen and (max-width: 480px) {
+	.interprise .modal-content .m-num {
+		display: block;
+	}
+
+	.interprise .modal-content .l-num {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 435px) {
 	.data-box .data {
 		width: 48.5%;
@@ -1703,7 +1736,7 @@ footer p {
 
 @media screen and (max-width: 320px) {
 	header .nav-box .main-menu {
-		width: 50%;
+		width: 33.3333%;
 	}
 
 	.menu {
@@ -1733,6 +1766,10 @@ footer p {
 }
 
 @media screen and (max-width: 295px) {
+	header .nav-box .main-title {
+		font-size: 12px;
+	}
+
 	.data-box .data {
 		width: 48%;
 	}
@@ -1774,6 +1811,10 @@ footer p {
 
 	header .nav-box .main-menu:hover ul {
 		display: none;
+	}
+
+	header .nav-box .main-title {
+		font-size: 14px;
 	}
 
 	.menu {
@@ -1891,6 +1932,10 @@ footer p {
 
 	header .nav-box .main-menu:hover ul {
 		display: block !important;
+	}
+
+	header .nav-box .main-title {
+		font-size: 16px;
 	}
 
 	.menu {
