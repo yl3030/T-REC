@@ -278,9 +278,15 @@ header .nav-box .main-title {
 	font-size: 16px;
 	font-weight: normal;
 	padding: 10px 0;
-	display: block;
+	display: inline-block;
 	width: 100%;
 	margin: 0;
+}
+
+header .nav-box .main-menu .fa-caret-down {
+	color: #fff;
+	margin-left: 3px;
+	display: none;
 }
 
 header .nav-box .main-menu:hover {
@@ -1383,6 +1389,10 @@ footer p {
 		position: relative;
 	}
 
+	header .nav-box .main-menu .fa-caret-down {
+		display: inline-block;
+	}
+
 	header .nav-box .drop-down-menu {
 		flex-wrap: wrap;
 	}
@@ -1865,6 +1875,10 @@ footer p {
 		position: static;
 	}
 
+	header .nav-box .main-menu .fa-caret-down {
+		display: inline-block;
+	}
+
 	header .nav-box .main-menu:hover {
 		background-color: #84b356;
 	}
@@ -1973,6 +1987,10 @@ footer p {
 
 	header .nav-box {
 		display: flex;
+	}
+
+	header .nav-box .main-menu .fa-caret-down {
+		display: none;
 	}
 
 	header .top-box .inpu-box {
