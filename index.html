@@ -217,15 +217,15 @@
                         <img src="./public/img/banner.jpg" alt="">
                     </a>
                 </div>
-                <div class="carousel-item bg" id="video-box" style="background-image:url(./public/img/maxresdefault.jpg)"
-                    data-interval="3000" data-pause="hover" onclick="onPlayerReady(event)">
-                        <img src="./public/img/maxresdefault.jpg" alt="">
+                <div class="carousel-item bg" id="video-box"
+                    style="background-image:url(./public/img/maxresdefault.jpg)" data-interval="3000" data-pause="hover"
+                    onclick="onPlayerReady(event)">
+                    <img src="./public/img/maxresdefault.jpg" alt="">
                 </div>
-                <div class="carousel-item bg" style="background-image:url(./public/img/banner.jpg)" data-interval="3000"
-                    data-pause="hover">
-                    <a href="https://www.youtube.com/watch?v=1n94tWxNcZ4&feature=emb_titled" target="_blank">
-                        <img src="./public/img/banner.jpg" alt="">
-                    </a>
+                <div class="carousel-item bg" id="video-box2"
+                    style="background-image:url(./public/img/maxresdefault.jpg)" data-interval="3000" data-pause="hover"
+                    onclick="onPlayerReady2(event)">
+                    <img src="./public/img/maxresdefault.jpg" alt="">
                 </div>
                 <div class="carousel-item bg" style="background-image:url(./public/img/banner.jpg)" data-interval="3000"
                     data-pause="hover">
@@ -357,10 +357,17 @@
         </div>
     </div>
 
-    <div id="mediaOverlay">
-        <div id="youtubeWrap">
+    <div id="mediaOverlay" class="mo">
+        <div class="youtubeWrap">
             <button class="close-btn" onclick="pp()"><i class="fas fa-times"></i></button>
-            <div id="banner-video"></div>
+            <div id="banner-video" class="bv"></div>
+        </div>
+    </div>
+
+    <div id="mediaOverlay2" class="mo">
+        <div class="youtubeWrap">
+            <button class="close-btn" onclick="pp2()"><i class="fas fa-times"></i></button>
+            <div id="banner-vide" class="bv"></div>
         </div>
     </div>
 
@@ -376,28 +383,55 @@
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        var player;
+        // var player;
+        var player2;
+        
+        // function onYouTubeIframeAPIReady() {
+        //     player = new YT.Player('banner-video', {
+        //         videoId: '1n94tWxNcZ4',
+        //         events: {
+        //             'onReady': stopVideo,
+        //         }
+        //     });
+        // }
 
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('banner-video', {
+        function onYouTubeIframeAPIReady2() {
+            player2 = new YT.Player('banner-vide', {
                 videoId: '1n94tWxNcZ4',
+                // videoId: '5L2sPBCbgrs',
                 events: {
                     'onReady': stopVideo,
                 }
             });
         }
+       
 
-        function pp() {
-            $("#mediaOverlay").hide();
-            document.documentElement.style.overflowY = 'scroll'; 
-            player.stopVideo();
+        // function pp() {
+        //     $("#mediaOverlay").hide();
+        //     document.documentElement.style.overflowY = 'scroll';
+        //     player.stopVideo();
+        // }
+
+        function pp2() {
+            $("#mediaOverlay2").hide();
+            document.documentElement.style.overflowY = 'scroll';
+            player2.stopVideo();
         }
 
-        function onPlayerReady(event) {
-            $("#mediaOverlay").show();
-            document.documentElement.style.overflowY = 'hidden'; 
-            event.target.playVideo();
+
+        function onPlayerReady2(event) {
+            $("#mediaOverlay2").show();
+            document.documentElement.style.overflowY = 'hidden';
+            event2.target.playVideo();
         }
+
+        // function onPlayerReady(event) {
+        //     $("#mediaOverlay").show();
+        //     document.documentElement.style.overflowY = 'hidden';
+        //     event.target.playVideo();
+        // }
+
+       
 
         var done = false;
         function onPlayerStateChange(event) {
