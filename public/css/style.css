@@ -47,7 +47,7 @@ a:hover {
 
 /* header top-box*/
 header {
-	z-index: 30;
+	z-index: 50;
 	background-color: #fff;
 }
 
@@ -1273,19 +1273,19 @@ button.lookmore a {
 
 /* media */
 #mediaOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 30;
-    display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 30;
+	display: none;
 }
 
 #mediaOverlay #youtubeWrap {
-    margin: 150px auto;
-    display: block;
+	margin: 150px auto;
+	display: block;
 	width: 60%;
 	height: 0;
 	padding-bottom: 33.75%;
@@ -1296,7 +1296,7 @@ button.lookmore a {
 	width: 25px;
 	height: 25px;
 	font-size: 25px;
-	text-shadow:none;
+	text-shadow: none;
 	position: absolute;
 	right: -30px;
 	top: -3px;
@@ -1304,7 +1304,7 @@ button.lookmore a {
 	border: 0;
 }
 
-#mediaOverlay .close-btn .fa-times{
+#mediaOverlay .close-btn .fa-times {
 	color: #fff;
 	transition: 0.3s;
 }
@@ -1335,8 +1335,6 @@ footer p {
 	text-align: center;
 	font-weight: 500;
 }
-
-
 
 @media screen and (min-width: 576px) {
 	.modal-dialog {
@@ -1561,8 +1559,8 @@ footer p {
 	}
 
 	.drop-down-qa table tr:nth-child(1) td .lt {
-	display: none;
-}
+		display: none;
+	}
 
 	.drop-down-qa table tr:nth-child(1) td .mt {
 		display: block;
@@ -1573,8 +1571,6 @@ footer p {
 		padding-bottom: 45%;
 	}
 }
-
-
 
 @media screen and (max-width: 576px) {
 	.data-box .data {
@@ -1659,6 +1655,12 @@ footer p {
 	#mediaOverlay #youtubeWrap {
 		width: 90%;
 		padding-bottom: 50.625%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.option-box {
+		min-width: auto;
 	}
 }
 
@@ -1772,6 +1774,10 @@ footer p {
 		margin-bottom: 15px;
 	}
 
+	.option-box {
+		min-width: 250px;
+	}
+
 	.drop-down-icon {
 		margin-right: 5px;
 	}
@@ -1867,6 +1873,10 @@ footer p {
 		margin-top: 10px;
 		padding: 0;
 		width: 100%;
+	}
+
+	.banner-box .carousel-item {
+		cursor: pointer;
 	}
 
 	.map,
