@@ -1974,12 +1974,13 @@ footer p {
 
 	.data-box {
 		display: inline-block;
-		width: 21%;
+		width: 18%;
 	}
 
 	.data-box .data {
 		width: 100%;
-		padding: 8px 12px 40px;
+		padding: 8px 12px 33px;
+		margin-bottom: 6px;
 	}
 
 	.data-box .data:nth-child(2) {
@@ -1999,10 +2000,11 @@ footer p {
 	.data-box .data .num {
 		font-size: 20px;
 		margin-top: 3px;
+		margin-bottom: 3px;
 	}
 
 	.banner-box {
-		width: 78.5%;
+		width: 81.5%;
 		padding-left: 10px;
 		margin-top: 0;
 	}
@@ -2066,6 +2068,7 @@ footer p {
 
 	.data-box .data {
 		padding: 10px 20px 40px;
+		margin-bottom: 7px;
 	}
 
 	.data-box .data img {
@@ -2075,6 +2078,7 @@ footer p {
 	.data-box .data .num {
 		font-size: 25px;
 		margin-top: -1px;
+		margin-bottom: 5px;
 	}
 
 	.banner-box {
