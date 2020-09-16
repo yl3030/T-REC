@@ -1263,6 +1263,14 @@ button.lookmore a {
 	padding: 12px;
 }
 
+.drop-down-qa table tr:nth-child(1) td p {
+	color: #fff;
+}
+
+.drop-down-qa table tr:nth-child(1) td .mt {
+	display: none;
+}
+
 /* media */
 #mediaOverlay {
     position: fixed;
@@ -1550,6 +1558,14 @@ footer p {
 	.file-box .qa:nth-child(1) {
 		padding-bottom: 30px;
 		border-bottom: 1px solid #84b356;
+	}
+
+	.drop-down-qa table tr:nth-child(1) td .lt {
+	display: none;
+}
+
+	.drop-down-qa table tr:nth-child(1) td .mt {
+		display: block;
 	}
 
 	#mediaOverlay #youtubeWrap {
