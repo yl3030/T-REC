@@ -1116,7 +1116,7 @@ button.lookmore a {
 }
 
 .file-box .qa {
-	width: 45%;
+	width: 47%;
 }
 
 .file-box .qa:nth-child(2) {
@@ -1168,6 +1168,7 @@ button.lookmore a {
 	color: #84b356;
 	vertical-align: middle;
 	margin: 0;
+	font-size: 15px;
 }
 
 .qa .link p:hover {
