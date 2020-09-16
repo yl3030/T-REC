@@ -630,7 +630,7 @@ button.lookmore a {
 /* 友站連結 */
 .friend {
 	margin-top: 10px;
-	padding: 0;
+	padding: 0 5px;
 }
 
 .friend-box {
@@ -1420,6 +1420,7 @@ footer p {
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
+		justify-content: space-between;
 	}
 
 	.data-box .data {
@@ -1820,6 +1821,17 @@ footer p {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.content-box2 .map-box {
+		height: 100%;
+		padding-bottom: 0;
+	}
+
+	.place {
+		margin-top: 0;
+	}
+}
+
 @media screen and (min-width: 769px) {
 	header {
 		position: sticky;
@@ -1874,6 +1886,7 @@ footer p {
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	.data-box .data {
