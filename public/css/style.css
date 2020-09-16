@@ -1154,6 +1154,8 @@ button.lookmore a {
 .qa .link {
 	line-height: 18px;
 	padding-left: 35px;
+	display: block;
+	margin-bottom: 10px;
 }
 
 .qa .link img {
