@@ -11,22 +11,6 @@ $(".hamburger").click(function () {
 });
 
 // 手風琴
-// $(".main-title-box").click(function () {
-// 	if((".m-nav-box").children(".drop-down-menu").children(".main-menu").children(".main-title-box").children(".fa-angle-down").hasClass("rotate")){
-// 		$(this).removeClass("rotate");
-// 		$(this).parents(".main-menu").children("ul").slideUp(300);
-// 	}
-// 	$(this).children(".fa-angle-down").addClass("rotate");
-// 	$(this).parents(".main-menu").children("ul").slideDown(300);
-// 	if ($(this).children(".fa-angle-down").hasClass("rotate")) {
-// 		$(this).children(".fa-angle-down").removeClass("rotate");
-// 		$(this).parents(".main-menu").children("ul").slideUp(300);
-// 	} else {
-// 		$(this).children(".fa-angle-down").addClass("rotate");
-// 		$(this).parents(".main-menu").children("ul").slideDown(300);
-// 	}
-// });
-
 $(".main-title-box").click(function () {
 	if ($(this).children(".fa-angle-down").hasClass("rotate")) {
 		$(".main-title-box").children(".fa-angle-down").removeClass("rotate");
