@@ -10,30 +10,41 @@ $(".hamburger").click(function () {
 	}
 });
 
-// 導覽列
-$(".main-menu").click(function () {
-	if ($(this).hasClass("open")) {
-		$(this).removeClass("open");
-		$(this).children("ul").hide();
-		$(".main-menu").css("background-color", "#84b356");
+// 手風琴
+$(".main-title-box").click(function () {
+	if ($(this).children(".fa-angle-down").hasClass("rotate")) {
+		$(this).children(".fa-angle-down").removeClass("rotate");
+		$(this).parents(".main-menu").children("ul").slideUp(300);
 	} else {
-		$(".main-menu").removeClass("open");
-		$(this).addClass("open");
-		$(".main-menu").children("ul").hide();
-		$(this).children("ul").show();
-		$(".main-menu").css("background-color", "#84b356");
-		$(this).css("background-color", "#a1cc77");
+		$(this).children(".fa-angle-down").addClass("rotate");
+		$(this).parents(".main-menu").children("ul").slideDown(300);
 	}
 });
 
-$(document).click(function (event) {
-	var m_con = $(".drop-down-menu");
-	if (!m_con.is(event.target) && m_con.has(event.target).length === 0) {
-		$(".drop-down-menu").children(".main-menu").children("ul").hide();
-		$(".main-menu").css("background-color", "#84b356");
-		$(".main-menu").removeClass("open");
-	}
-});
+// 導覽列
+// $(".main-menu").click(function () {
+// 	if ($(this).hasClass("open")) {
+// 		$(this).removeClass("open");
+// 		$(this).children("ul").hide();
+// 		$(".main-menu").css("background-color", "#84b356");
+// 	} else {
+// 		$(".main-menu").removeClass("open");
+// 		$(this).addClass("open");
+// 		$(".main-menu").children("ul").hide();
+// 		$(this).children("ul").show();
+// 		$(".main-menu").css("background-color", "#84b356");
+// 		$(this).css("background-color", "#a1cc77");
+// 	}
+// });
+
+// $(document).click(function (event) {
+// 	var m_con = $(".drop-down-menu");
+// 	if (!m_con.is(event.target) && m_con.has(event.target).length === 0) {
+// 		$(".drop-down-menu").children(".main-menu").children("ul").hide();
+// 		$(".main-menu").css("background-color", "#84b356");
+// 		$(".main-menu").removeClass("open");
+// 	}
+// });
 
 $(".btn-box")
 	.children("button")
