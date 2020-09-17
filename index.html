@@ -182,6 +182,23 @@
                         </li>
                         <li class="main-menu">
                             <div class="main-title-box">
+                                <p class="main-title">憑證資訊</p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <ul>
+                                <li class="second-menu">
+                                    <a href="#">已發放憑證</a>
+                                </li>
+                                <li class="second-menu">
+                                    <a href="#">憑證查詢</a>
+                                </li>
+                                <li class="second-menu">
+                                    <a href="#">憑證宣告專區</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-menu">
+                            <div class="main-title-box">
                                 <p class="main-title">媒合交易專區</p>
                                 <i class="fas fa-angle-down"></i>
                             </div>
@@ -212,18 +229,33 @@
                         </li>
                     </ul>
                 </nav>
-                <ul class="link">
-                    <li><a href="./index.html">首頁</a></li>
-                    <li><a href="#">電子報</a></li>
-                    <li><a href="#">網站導覽</a></li>
-                    <li><a href="#">憑證宣告專區</a></li>
-                    <li><a href="#">聯絡我們</a></li>
-                    <li class="engl"><a href="#">English</a></li>
-                </ul>
                 <div class="user">
+                    <a href="#">English</a>
                     <a href="#">會員登入</a>
                     <a href="#">會員申請</a>
                 </div>
+                <ul class="more-link">
+                    <li class="main-menu">
+                        <div class="main-title-box">
+                            <p class="main-title">更多連結</p>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <ul>
+                            <li class="second-menu">
+                                <a href="#">電子報</a>
+                            </li>
+                            <li class="second-menu">
+                                <a href="#">網站導覽</a>
+                            </li>
+                            <li class="second-menu">
+                                <a href="#">憑證宣告專區</a>
+                            </li>
+                            <li class="second-menu">
+                                <a href="#">聯絡我們</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -274,16 +306,15 @@
             <div class="carousel-inner">
                 <div class="carousel-item active bg" style="background-image:url(./public/img/banner.jpg)"
                     data-interval="3000" data-pause="hover">
-                        <img src="./public/img/banner.jpg" alt="">
+                    <img src="./public/img/banner.jpg" alt="">
                 </div>
-                <div class="carousel-item bg" id="video-box"
-                    style="background-image:url(./public/img/v-pic.png)" data-interval="3000" data-pause="hover"
-                    onclick="onPlayerReady(event)">
+                <div class="carousel-item bg" id="video-box" style="background-image:url(./public/img/v-pic.png)"
+                    data-interval="3000" data-pause="hover" onclick="onPlayerReady(event)">
                     <img src="./public/img/v-pic.png" alt="">
                 </div>
                 <div class="carousel-item bg" id="video-box2"
-                    style="background-image:url(https://i.ytimg.com/vi/5L2sPBCbgrs/maxresdefault.jpg)" data-interval="3000" data-pause="hover"
-                    onclick="onPlayerReady2(event)">
+                    style="background-image:url(https://i.ytimg.com/vi/5L2sPBCbgrs/maxresdefault.jpg)"
+                    data-interval="3000" data-pause="hover" onclick="onPlayerReady2(event)">
                     <img src="https://i.ytimg.com/vi/5L2sPBCbgrs/maxresdefault.jpg" alt="">
                 </div>
                 <!-- <div class="carousel-item bg" data-interval="3000"
@@ -440,7 +471,7 @@
 
         // var player;
         var player2;
-        
+
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('banner-video', {
                 videoId: '1n94tWxNcZ4',
@@ -448,14 +479,14 @@
                     'onReady': stopVideo,
                 }
             });
-             player2 = new YT.Player('banner-vide', {
+            player2 = new YT.Player('banner-vide', {
                 videoId: '5L2sPBCbgrs',
                 events: {
                     'onReady': stopVideo,
                 }
             });
         }
-       
+
         function pp() {
             $("#mediaOverlay").hide();
             document.documentElement.style.overflowY = 'scroll';

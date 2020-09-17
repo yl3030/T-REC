@@ -201,13 +201,19 @@ header .top-box {
 	text-align: center;
 }
 
-.menu .m-nav-box .main-title {
+.menu .main-title {
 	font-size: 16px;
 	color: var(--main-color);
 	margin-bottom: 0;
 	display: inline-block;
 	vertical-align: middle;
 	padding: 15px;
+	text-align: center;
+}
+
+.menu .more-link .main-title-box {
+	margin: 0 auto;
+	width: 100%;
 }
 
 .menu .m-nav-box a.main-title {
@@ -216,7 +222,7 @@ header .top-box {
 	height: 100%;
 }
 
-.menu .m-nav-box .fa-angle-down {
+.menu .fa-angle-down {
 	color: var(--main-color);
 	font-size: 18px;
 	vertical-align: middle;
@@ -224,7 +230,7 @@ header .top-box {
 	transition: 0.3s;
 }
 
-.menu .m-nav-box .fa-angle-down.rotate {
+.menu .fa-angle-down.rotate {
 	transform: rotate(-180deg);
 }
 
@@ -232,7 +238,11 @@ header .top-box {
 	display: none;
 }
 
-.menu .m-nav-box .second-menu a {
+.menu .more-link ul {
+	display: none;
+}
+
+.menu .second-menu a {
 	display: block;
 	padding: 10px;
 	color: rgb(126, 126, 126);
@@ -242,7 +252,7 @@ header .top-box {
 	margin: 10px 20px 5px;
 }
 
-.menu .link {
+.menu .user {
 	padding: 10px;
 	border-bottom: 1px solid #dddddd;
 }
@@ -368,11 +378,6 @@ header .nav-box .second-menu a {
 
 header .nav-box .second-menu:hover {
 	background-color: #fcfff8;
-}
-
-.menu .main-menu {
-	line-height: 20px;
-	text-align: center;
 }
 
 marquee {
@@ -1480,8 +1485,6 @@ footer p {
 	.menu {
 		height: calc(100vh - 115px);
 	}
-
-
 
 	.content-box1 {
 		display: block;
